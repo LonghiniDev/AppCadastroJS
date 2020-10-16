@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="utf-8" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>App Cadastro</title>
+  </head>
+
+  <body class="has-header grey-200">
+    <div class="header black">
+      <h1 class="margin">Adicionar Usuário</h1>
+    </div>
+    <div class="list white" id="formCadaster">
+      <div class="item">
+        <input type="text" id="name" placeholder="Nome" />
+      </div>
+      <div class="item">
+        <input type="email" id="email" placeholder="Email"/>
+      </div>
+      <div class="item">
+        <button class="green full" onclick="addUser()">Salvar</button>
+      </div>
+      <div class="item text-red hidden" id="messageValidation">
+        <p><i class="icon ion-alert-circled"></i> ERROR 404</p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="item" data="users">
+        <h2>${name}</h2>
+        <p>${email}</p>
+        <div class="right">
+          <button
+            class="border icon ion-trash-b grey"
+            onclick="deleteUser($$index)"
+          ></button>
+          <button
+            class="border icon ion-edit grey"
+            onclick="editUser($$index)"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
